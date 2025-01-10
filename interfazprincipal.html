@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="titulo">IMAGE TAGGER</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1 style="font-size: 50px; text-align: center;">IMAGE TAGGER</h1>
+    <div class="contenedor">
+        <button id="guardar">Guardar datos</button>
+        <button id="reiniciar" onclick="reload()">Etiquetado nuevo</button>
+
+    </div>
+
+    <div class="subirimg">
+        <input type="file" id="subir" accept="image/*" multiple><br><br>
+    </div>
+
+    <select id="listaImagenes">
+        <option value="-1"></option>
+    </select> <br>
+
+    <div class="canvascont">
+        <canvas id="canvas" width="1920" height="1080">
+
+        </canvas>
+    </div>
+    <div class="listaanotaciones">
+        <h3>Annotations:</h3>
+        <ul id="annotations"></ul>
+    </div>
+    <div id="veretiqueta">
+    </div>
+    <button id="salir" onclick="inicio()"></button>
+    <!-- <button id="salir" onclick="reload()">Salir</button> -->
+
+    <script src="script.js"></script>
+
+    </div>
+
+</body>
+
+</html>

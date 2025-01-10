@@ -72,6 +72,7 @@ function mostrarImagenDesdeIndice(indice) {
     ctx.drawImage(img, 0, 0)
     anotacionesActuales = anotaciones[indice] || [] //ya que se dibuja la imagen, se van viendo las anotaciones pero si se borra entonces el arreglo estará vacio
     dibujarTodasAnotaciones()
+    actualizarListaAnotaciones()
   }
 }
 
@@ -157,22 +158,23 @@ function eliminarAnotacion(evento) {
 }
 
 function actualizarListaAnotaciones() {
-  const ul = document.getElementById('anotaciones');
+  const ul = document.getElementById('annotations');
   ul.innerHTML = '';
-
+  console.log("soy anotaciones actuales: " + anotacionesActuales)
   anotacionesActuales.forEach((anotacion, indice) => {
     const li = document.createElement('li');
-    li.textContent = `Etiqueta: ${anotacion.etiqueta}, Coordenadas: (${anotacion.x1}, ${anotacion.y1}) a (${anotacion.x2}, ${anotacion.y2})`;
+    li.textContent = `Label: ${anotacion.etiqueta}, Coordinates: (${anotacion.x1}, ${anotacion.y1}) to (${anotacion.x2}, ${anotacion.y2})`;
     ul.appendChild(li);
+
   });
 }
 
 function guardarAnotaciones() {
   //forma en la que esta escrita el json que se va a descargar
   const anotacionesFormateadas = anotaciones.map((setAnotaciones, indice) => ({
-    nombreArchivo: nombresArchivos[indice],
-    objetos: setAnotaciones.map(anotacion => ({
-      etiqueta: anotacion.etiqueta,
+    filename: nombresArchivos[indice],
+    objects: setAnotaciones.map(anotacion => ({
+      label: anotacion.etiqueta,
       bbox: [anotacion.x1, anotacion.y1, anotacion.x2, anotacion.y2]
     }))
   }));
@@ -223,6 +225,27 @@ function eliminarTodasAnotaciones() {
   }
 }
 
+canvas.addEventListener('mousemove', mostrarEtiqueta);
+function mostrarEtiqueta(evento) {
+  const [mouseX, mouseY] = obtenerPosicionMouse(evento);
+  const tooltip = document.getElementById('veretiqueta');
+  let mostrar = false;
+  anotacionesActuales.forEach(anotacion => {
+    if (mouseX >= anotacion.x1 && mouseX <= anotacion.x2 && mouseY >= anotacion.y1 && mouseY <= anotacion.y2) {
+      tooltip.style.left = `${evento.clientX + 10}px`;
+      tooltip.style.top = `${evento.clientY + 10}px`;
+      tooltip.textContent = anotacion.etiqueta;
+      tooltip.style.display = 'block';
+      mostrar = true;
+    }
+  });
+  if (!mostrar) {
+    tooltip.style.display = 'none';
+  }
+}
 function reload() {
   location.reload()
+}
+function inicio() {
+  window.location.href = "index.html";
 }

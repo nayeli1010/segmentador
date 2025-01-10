@@ -1,44 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <title id="titulo">Etiquetador de imagenes</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="stylemain.css">
 </head>
 
 <body>
+    <button onclick="mostrarSegmentacion()">Segmentación</button>
 
-    <h1>Etiquetador de imagenes</h1>
-    <div class="contenedor">
-        <button id="guardar">Guardar datos</button>
-        <button id="reiniciar" onclick="reload()">Etiquetado nuevo</button>
-    </div>
-    <div class="subirimg">
-        <input type="file" id="subir" accept="image/*" multiple><br><br>
-    </div>
-
-    <select id="listaImagenes">
-        <option value="-1"></option>
-    </select><br>
-    </div>
-
-    <div class="canvascont">
-        <canvas id="canvas" width="1920" height="1080">
-
-        </canvas>
-    </div>
-    <div class="listaimg">
-        <ul id="anotaciones"></ul>
-    </div>
-
-    <div id="labels">
-    </div>
-    <h3>Annotations:</h3>
-
-
-
-    <script src="script.js"></script>
+    <script>
+        function mostrarSegmentacion() {
+            window.location.href = "interfazprincipal.html";
+        }
+    </script>
 </body>
 
 </html>
