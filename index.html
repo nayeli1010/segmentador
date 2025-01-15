@@ -9,11 +9,30 @@
 </head>
 
 <body>
-    <button onclick="mostrarSegmentacion()">Segmentación</button>
+    <div class="context">
+        <h1></h1>
+    </div>
 
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <button onclick="mostrarSegmentacion()">Object detection</button>
+    <button onclick="mostrarSegmentacion()">Clasification</button>
     <script>
         function mostrarSegmentacion() {
-            window.location.href = "interfazprincipal.html";
+            window.location.href = "segmInterfaz.html";
         }
     </script>
 </body>
