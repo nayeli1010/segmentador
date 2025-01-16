@@ -1,0 +1,57 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="styleclasificacion.css">
+	<!-- Load TensorFlow.js -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+	<!-- Load MobileNet -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+	<!-- Load KNN Classifier -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+	<!-- Own script -->
+
+
+</head>
+
+<body>
+	<h1 style="font-size: 50px; text-align: center;">CLASIFICATION</h1>
+	<div class="d-flex flex-column justify-content-center w-100 h-100">
+
+		<div class="d-flex flex-column justify-content-center align-items-center">
+
+			<div class="btn-group my-5">
+				<a href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip"
+					class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+			</div>
+			<a href="https://manuel.pinto.dev" class="text-decoration-none">
+
+			</a>
+		</div>
+	</div>
+	</div>
+
+
+	<p id="pgood">Muestras "Pass"</p>
+	<input type="file" id="kgusamples" name="fileList" webkitdirectory multiple />
+	<ul id="kgulist"></ul>
+
+	<p id="pfail">Muestras"Fail"</p>
+	<input type="file" id="badsamples" name="fileList" webkitdirectory multiple />
+	<ul id="badlist"></ul>
+
+	<p id="test_pic">Imagen de prueba</p>
+	<input type="file" id="testsample" name="file" accept=".png, .jpg, .jpeg" />
+	<ul id="badlist"></ul>
+	<h4 id="learning"></h4>
+
+
+	<button id="train_b" class="button button2" onclick="trainersequence()">Entrenar Net</button>
+	<button id="guarda_nn" class="button button1" onclick="save()">Guardar Net</button>
+	<button id="test_b" class="button button3" onclick="test_pic()">Test Net</button>
+	<button id="salir" class="button" onclick="inicio()"></button>
+	<script src="nntrainer.js"></script>
+	<div><img id="image" width=486px height=192px></div>
+
+</body>
+
+</html>

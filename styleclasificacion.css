@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.png');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans';
+    margin-top: 50px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    /*background: linear-gradient(to right, #c2e9f3c6, #e4e6e7e1);*/
+    color: #a9a9aa;
+    text-shadow: -1px 0 #4d4949, 0 1px #7a7a76ab, 1px 0 #272726ba, 0 -1px #2c2c2d, -2px 2px 0 #2b2b27cb, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #494a4d;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 28px;
+    text-align: center;
+    width: 271px;
+    height: 100px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(135, 142, 139, 0.671);
+}
+
+
+.button1 {
+    background-color: rgba(135, 142, 139, 0.671);
+    color: black;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: rgba(135, 142, 139, 0.671);
+    color: white;
+
+}
+
+.button2 {
+    background-color: rgba(135, 142, 139, 0.671);
+    color: black;
+    border-radius: 5px;
+}
+
+.button2:hover {
+    background-color: rgba(135, 142, 139, 0.671);
+    color: white;
+}
+
+.button3 {
+    background-color: rgba(135, 142, 139, 0.671);
+    color: black;
+    border-radius: 5px;
+}
+
+.button3:hover {
+    background-color: gray;
+    color: white;
+}
+
+#pgood {
+    position: absolute;
+    top: calc(67%);
+    left: calc(28%);
+    font-size: 29px;
+    border-color: #0000ff;
+    font-weight: bold;
+}
+
+#kgusamples {
+    position: absolute;
+    top: calc(76%);
+    right: calc(54%);
+    cursor: pointer;
+    width: 500px;
+    height: 70px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#pfail {
+    position: absolute;
+    top: calc(67%);
+    left: calc(46%);
+    font-size: 29px;
+    font-weight: bold;
+
+
+}
+
+#badsamples {
+    position: absolute;
+    top: calc(76%);
+    left: calc(44%);
+    cursor: pointer;
+    width: 500px;
+    height: 70px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#test_pic {
+    position: absolute;
+    top: calc(67%);
+    left: calc(62%);
+    font-size: 29px;
+    border-color: #0000ff;
+    font-weight: bold;
+}
+
+#testsample {
+    position: absolute;
+    top: calc(76%);
+    right: calc(20%);
+    cursor: pointer;
+    width: 500px;
+    height: 70px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#image {
+    position: absolute;
+    top: calc(41%);
+    left: calc(35%);
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}
+
+#train_b {
+    position: absolute;
+    top: calc(14%);
+    left: calc(29%);
+}
+
+#test_b {
+    position: absolute;
+    top: calc(14%);
+    left: calc(43%);
+}
+
+#guarda_nn {
+    position: absolute;
+    top: calc(14%);
+    left: calc(56%);
+}
+
+#learning {
+    position: absolute;
+    top: calc(35%);
+    left: calc(69%);
+}
+
+#salir {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    right: 311px;
+    background-image: url('./img/salir.png');
+    background-size: cover;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+}
